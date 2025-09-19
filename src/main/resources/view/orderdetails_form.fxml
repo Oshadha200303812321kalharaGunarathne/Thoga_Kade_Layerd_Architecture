@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="orderDetailsController.OrderDetailsFormController">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="74.0" layoutY="14.0" text="Thoga Kade">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="42.0" text="OrderDetailsManagement">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrderDetails" layoutX="296.0" layoutY="72.0" prefHeight="227.0" prefWidth="331.0">
+        <columns>
+          <TableColumn fx:id="colOrderID" prefWidth="75.0" text="Order ID" />
+          <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Item Code" />
+            <TableColumn fx:id="colOrderQty" prefWidth="92.0" text="OrderQty" />
+            <TableColumn fx:id="colOrderDiscount" prefWidth="88.0" text="Discount" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="135.0" text="Order ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="177.0" text="Item Code:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="216.0" text="Order Qty:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="261.0" text="Discount:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderID" layoutX="94.0" layoutY="123.0" />
+      <JFXTextField fx:id="txtItemCode" layoutX="94.0" layoutY="165.0" />
+      <JFXTextField fx:id="txtOrderQty" layoutX="94.0" layoutY="204.0" />
+      <JFXTextField fx:id="txtDiscount" layoutX="94.0" layoutY="249.0" />
+      <JFXButton fx:id="btnAdd" layoutX="15.0" layoutY="330.0" onAction="#btnAddOnAction" text="Add" textFill="#0db1d1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="62.0" layoutY="330.0" onAction="#btnDeleteOnAction" text="Delete" textFill="#da0c0c">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="123.0" layoutY="330.0" onAction="#btnUpdateOnAction" text="Update" textFill="#0eeb24">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="186.0" layoutY="330.0" onAction="#btnClearOnAction" text="Clear" textFill="#980cd0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnView" layoutX="239.0" layoutY="330.0" onAction="#btnViewOnAction" text="View" textFill="#da0c88">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

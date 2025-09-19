@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="orderController.OrderFormController">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="74.0" layoutY="14.0" text="Thoga Kade">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="42.0" text="OrderManagement">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrderDetails" layoutX="271.0" layoutY="77.0" prefHeight="234.0" prefWidth="269.0">
+        <columns>
+          <TableColumn fx:id="colOrderID" prefWidth="89.0" text="OrderID " />
+          <TableColumn fx:id="colOrderDate" prefWidth="106.0" text="Order Date" />
+            <TableColumn fx:id="colCustID" prefWidth="73.0" text="Cust ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="135.0" text="Order ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="177.0" text="Order Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="220.0" text="Cust ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderID" layoutX="95.0" layoutY="123.0" />
+      <JFXTextField fx:id="txtCustID" layoutX="95.0" layoutY="208.0" />
+      <JFXButton fx:id="btnAdd" layoutX="22.0" layoutY="342.0" onAction="#btnAddOnAction" text="Add" textFill="#16aae4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="71.0" layoutY="342.0" onAction="#btnDeleteOnAction" text="Delete" textFill="#e10a0a">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="126.0" layoutY="342.0" onAction="#btnUpdateOnAction" text="Update" textFill="#06e40e">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="187.0" layoutY="342.0" onAction="#btnClearOnAction" text="Clear" textFill="#7c267c">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnView" layoutX="239.0" layoutY="342.0" onAction="#btnViewOnAction" text="View" textFill="#dd0756">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="pickerDate" layoutX="98.0" layoutY="173.0" prefHeight="25.0" prefWidth="129.0" />
+   </children>
+</AnchorPane>

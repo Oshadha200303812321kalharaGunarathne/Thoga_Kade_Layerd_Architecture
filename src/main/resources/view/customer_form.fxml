@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customerController.CustomerFormController">
+   <children>
+      <ImageView fitHeight="576.0" fitWidth="1077.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="79.0" layoutY="45.0" text="Customer Management">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="53.0" fitWidth="66.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="79.0" layoutY="14.0" text="Thoga Kade">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomerDetails" layoutX="340.0" layoutY="91.0" prefHeight="377.0" prefWidth="677.0">
+        <columns>
+          <TableColumn fx:id="colCustID" prefWidth="75.0" text="CustID " />
+          <TableColumn fx:id="colCustTitle" prefWidth="75.0" text="CustTitle" />
+            <TableColumn fx:id="colCustName" prefWidth="75.0" text="CustName" />
+            <TableColumn fx:id="colDOB" prefWidth="75.0" text="DOB" />
+            <TableColumn fx:id="colsalary" prefWidth="75.0" text="salary" />
+            <TableColumn fx:id="colCustAddress" prefWidth="75.0" text="CustAddress" />
+            <TableColumn fx:id="colCity" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="75.0" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="75.0" text="PostalCode" />
+        </columns>
+      </TableView>
+      <Label layoutX="26.0" layoutY="141.0" text="CustID :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="180.0" text="CustTitle :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="223.0" text="CustName :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="265.0" text="DOB :">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="302.0" text="Salary :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="342.0" text="CustAddress :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="381.0" text="City :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="417.0" text="Province :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="454.0" text="PostalCode :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" layoutX="29.0" layoutY="519.0" onAction="#btnAddOnAction" text="Add" textFill="#08c2e8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="79.0" layoutY="519.0" onAction="#btnDeleteOnAction" text="Delete" textFill="#dd0c0c">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="147.0" layoutY="519.0" onAction="#btnUpdateOnAction" text="Update" textFill="#1eda05">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="215.0" layoutY="519.0" onAction="#btnClearOnAction" text="Clear" textFill="#3d0ac9">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="txtCustID" layoutX="104.0" layoutY="128.0" />
+      <JFXTextField fx:id="txtCustName" layoutX="110.0" layoutY="211.0" />
+      <DatePicker fx:id="pickerDOB" layoutX="107.0" layoutY="261.0" prefHeight="25.0" prefWidth="135.0" />
+      <JFXTextField fx:id="txtSalary" layoutX="110.0" layoutY="290.0" />
+      <JFXTextField fx:id="txtCustAddress" layoutX="110.0" layoutY="330.0" />
+      <JFXComboBox fx:id="comboCity" layoutX="113.0" layoutY="373.0" prefHeight="25.0" prefWidth="129.0" />
+      <JFXComboBox fx:id="comboProvince" layoutX="113.0" layoutY="405.0" prefHeight="25.0" prefWidth="129.0" />
+      <JFXTextField fx:id="txtPostalCode" layoutX="113.0" layoutY="442.0" />
+      <JFXComboBox fx:id="comboCustTitle" layoutX="107.0" layoutY="168.0" prefHeight="25.0" prefWidth="129.0" />
+      <JFXButton fx:id="btnView" layoutX="265.0" layoutY="519.0" onAction="#btnViewOnAction" text="View" textFill="#da1598">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+
+   </children>
+</AnchorPane>

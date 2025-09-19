@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="431.0" layoutY="14.0" prefHeight="12.0" prefWidth="129.0" text="Thoga Kade">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCustomerDetails" layoutX="412.0" layoutY="106.0" onAction="#btnCustomerDetailsOnAction" text="Customer Details" textFill="#ee1111">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnItemDetails" layoutX="433.0" layoutY="175.0" onAction="#btnItemDetailsOnAction" text="Item Details" textFill="#ff0909">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnOrderDetails" layoutX="428.0" layoutY="251.0" onAction="#btnOrderDetailsOnAction" text="Order Details" textFill="#f50b0b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnOrders" layoutX="459.0" layoutY="317.0" onAction="#btnOrdersOnAction" text="Orders" textFill="#ff0f0f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
