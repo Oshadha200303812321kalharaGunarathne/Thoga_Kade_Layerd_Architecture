@@ -1,10 +1,11 @@
-package orderDetailsController;
+package Repository;
 
-import javafx.collections.ObservableList;
 import model.OrderDetails;
 
-public interface OrderDetailsManagementService {
-    ObservableList<OrderDetails>viewOrderDetails();
+import java.sql.ResultSet;
+
+public interface OrderDetailsRepository {
+    ResultSet viewOrderDetails();
     void addOrderDetails(OrderDetails orderDetails);
     void updateOrderDetails(OrderDetails orderDetails);
     void deleteOrderDetails(String ID1,String ID2);

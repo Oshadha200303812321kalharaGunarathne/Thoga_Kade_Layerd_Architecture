@@ -1,4 +1,4 @@
-package customerController;
+package Service;
 
 import javafx.collections.ObservableList;
 import model.CustomerDetails;

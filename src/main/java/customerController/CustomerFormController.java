@@ -1,5 +1,7 @@
 package customerController;
 
+import Service.Impl.CustomerServiceImpl;
+import Service.CustomerManagementService;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -20,7 +22,7 @@ import java.util.ResourceBundle;
 public class CustomerFormController implements Initializable {
     ObservableList <CustomerDetails> customerDetails = FXCollections.observableArrayList();
 
-    CustomerManagementService customerManagementService=new CustomerManagementController();
+    CustomerManagementService customerManagementService=new CustomerServiceImpl();
 
     @FXML
     private JFXButton btnAdd;

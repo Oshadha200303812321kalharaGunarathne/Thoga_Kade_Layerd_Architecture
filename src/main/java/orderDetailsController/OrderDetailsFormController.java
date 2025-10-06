@@ -1,5 +1,7 @@
 package orderDetailsController;
 
+import Service.Impl.OrderDetailsServiceImpl;
+import Service.OrderDetailsManagementService;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -14,7 +16,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OrderDetailsFormController implements Initializable {
-    OrderDetailsManagementService orderDetailsManagementService=new OrderDetailsManagementController();
+    OrderDetailsManagementService orderDetailsManagementService=new OrderDetailsServiceImpl();
 
     @FXML
     private JFXTextField txtItemCode;

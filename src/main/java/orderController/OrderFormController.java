@@ -1,5 +1,7 @@
 package orderController;
 
+import Service.Impl.OrderServiceImpl;
+import Service.OrderManagementService;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -16,7 +18,7 @@ import java.util.ResourceBundle;
 
 public class OrderFormController implements Initializable {
 
-    OrderManagementService orderManagementService=new OrderManagementController();
+    OrderManagementService orderManagementService=new OrderServiceImpl();
 
     @FXML
     private JFXButton btnAdd;

@@ -1,5 +1,7 @@
 package itemController;
 
+import Service.Impl.ItemServiceImpl;
+import Service.ItemManagementService;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -15,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class ItemFormController implements Initializable {
 
-    ItemManagementService itemManagementService=new ItemManagementController();
+    ItemManagementService itemManagementService=new ItemServiceImpl();
 
     @FXML
     private JFXButton btnAdd;
@@ -92,7 +94,7 @@ public class ItemFormController implements Initializable {
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         String ID=txtItemCode.getText();
-        ItemManagementService itemManagementService=new ItemManagementController();
+        ItemManagementService itemManagementService=new ItemServiceImpl();
         itemManagementService.deleteItemDetails(ID);
 
         btnClearOnAction(event);
